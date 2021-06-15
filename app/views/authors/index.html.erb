@@ -1,0 +1,13 @@
+<ul>
+    <% @authors.all.each do |f|%>
+
+    <li><%= f.name%></li>
+    <li><%= f.age%></li>
+    <%= link_to "Edit",  edit_author_path(f)%>
+    <%= link_to "Delete",  author_path(f), method: :delete, data: {confirm: "are you sure?"}%>
+    <%= link_to "Show", author_path(f) %>
+    <%end%>
+</ul>
+
+
+ <%= link_to "New", new_author_path %>
